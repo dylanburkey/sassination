@@ -12,7 +12,6 @@
 @import "styles/sass/libs/normalize";
 
 
-
 /*----------------------------------------------------------------------------*\
 
 	#Base Styles
@@ -349,6 +348,29 @@ body {
 
 /*----------------------------------------------------------------------------*\
 
+	#Headline Styles
+
+\*----------------------------------------------------------------------------*/
+
+.headline-3 {
+	@include font-size(36px);
+}
+
+.banner-text {
+	text-align: center;
+	color: $lincoln-red;
+	font-weight: 600;
+	@extend %cf;
+	margin: .625em 0;
+}
+
+.intro-content {
+	@include font-size(16px);
+	color: $default-color;
+}
+
+/*----------------------------------------------------------------------------*\
+
 	#Accordion Styles
 
 \*----------------------------------------------------------------------------*/
@@ -442,6 +464,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	font-weight: 400;
+	color: $default-color;
 }
 
 
