@@ -352,8 +352,18 @@ body {
 
 \*----------------------------------------------------------------------------*/
 
+.headline-2 {
+	@include font-size(44px);
+}
+
 .headline-3 {
 	@include font-size(36px);
+}
+
+.header {
+	color: $lincoln-red;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 .banner-text {
