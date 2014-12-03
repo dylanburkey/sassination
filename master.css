@@ -588,7 +588,8 @@ body {
   line-height: 1.5;
   color: #be1e2d;
   text-align: center;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: 1em; }
 
 .accordion-header {
   background: #e7e8e9; }
@@ -608,7 +609,7 @@ body {
   font-size: 1.375rem;
   line-height: 1.09091;
   color: #be1e2d;
-  padding: 1em 0 1em 1em;
+  padding: .625em 0 .625em 1em;
   text-transform: uppercase;
   text-decoration: none;
   background: #e6e7e8;
