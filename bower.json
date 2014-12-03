@@ -1,0 +1,22 @@
+{
+  "name": "Big Sexy SASS",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lecowebteam/Lincoln-Electric-Mobile-Website",
+  "authors": [
+    "Dylan Burkey <dylanburkey@outlook.com>"
+  ],
+  "description": "Big Sexy SASS is the Lincoln Electric boilerplate SASS/CSS framework.",
+  "main": "master.scss",
+  "keywords": [
+    "Lincoln",
+    "SASS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
