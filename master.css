@@ -108,12 +108,12 @@
 
 \*----------------------------------------------------------------------------*/
 .marketing-page:after, .section-wrap:after, .base-container:after, .global-container:after, .row:after, .content-container:after, .content:after,
-.content-header:after, .content-img:after, .content-list:after, .accordion-header:after {
+.content-header:after, .content-img:after, .content-list:after, .accordion-footer:after, .accordion-content:after, .accordion-container:after {
   content: "";
   clear: both;
   display: block; }
 
-.section-wrap, .base-container, .global-container, .row, .content-container, .visual-break, .visual-bg, .media-container, .accordion-header {
+.section-wrap, .base-container, .global-container, .row, .content-container, .visual-break, .visual-bg, .media-container, .accordion-content, .accordion-container {
   position: relative; }
 
 /*----------------------------------------------------------------------------*\
@@ -563,21 +563,89 @@ body {
 	#Accordion Styles
 
 \*----------------------------------------------------------------------------*/
-.accordion-header {
-  height: 50px;
-  background: #ddd; }
-  .accordion-header .accordion-header-label {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    vertical-align: middle;
-    padding-left: 1em;
-    text-transform: uppercase;
-    color: #be1e2d; }
-
-.automation, .automation:before, .automation:after {
+.accordion-container, .accordion-container:before, .accordion-container:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+/*----------------------------------------------------------------------------*\
+
+	#Accordion Text
+
+\*----------------------------------------------------------------------------*/
+.accordion-text > p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400; }
+
+/**
+ * Accordion Footer
+ */
+.accordion-footer {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #be1e2d;
+  text-align: center;
+  font-weight: 600; }
+
+.accordion-header {
+  background: #e7e8e9; }
+  .accordion-header .accordion-header-label {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 1.09091;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #be1e2d;
+    padding: .3125em 0;
+    padding-left: 1em; }
+
+.accordion-toggle {
+  display: block;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.09091;
+  color: #be1e2d;
+  padding: 1em 0 1em 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #e6e7e8;
+  font-weight: 600; }
+
+.accordion-content {
+  display: none; }
+  .accordion-content.open {
+    display: block; }
+
+.accordion-footer {
+  text-align: center;
+  color: #be1e2d;
+  font-weight: 600; }
+
+.toggle-icon {
+  position: absolute;
+  top: 9px;
+  right: 20px;
+  font-size: 1.5em; }
+
+.automation {
+  font-family: 'Titillium', Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 400; }
+  .automation, .automation:before, .automation:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.content > p, .text-content > p, .primary-content > p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.hero-container {
+  margin-bottom: 2.5em; }
 
 /*# sourceMappingURL=master.css.map */

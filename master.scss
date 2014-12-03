@@ -353,23 +353,104 @@ body {
 
 \*----------------------------------------------------------------------------*/
 
+.accordion-container {
+	@include box-sizing(border-box);
+}
+
+/*----------------------------------------------------------------------------*\
+
+	#Accordion Text
+
+\*----------------------------------------------------------------------------*/
+
+.accordion-text > p {
+	@include font-size(16px);
+	font-weight: 400;
+}
+
+/**
+ * Accordion Footer
+ */
+
+ .accordion-footer {
+ 	@include font-size(16px);
+ 	color: $lincoln-red;
+ 	text-align: center;
+	font-weight: 600;
+	@extend %cf;
+ }
 
 .accordion-header {
-	height: 50px;
-	background: #ddd;
-	@extend %pos_relative;
-	@extend %cf;
-	
+	background: #e7e8e9;
+
+
 	.accordion-header-label {
-		@include font-size(24px);
+		@include font-size(22px);
 		vertical-align: middle;
-		padding-left: 1em;
 		text-transform: uppercase;
 		color: #be1e2d;
+		padding: .3125em 0;
+		padding-left: 1em;
+
 	}
+}
+
+.accordion-toggle {
+	display: block;
+	@include font-size(22px);
+	color: $lincoln-red;
+	padding: 1em 0 1em 1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #e6e7e8;
+	font-weight: 600;
+}
+
+
+.accordion-content {
+	display: none;
+	@extend %pos_relative;
+	@extend %cf;
+
+	// If we want to diplay one of the accordions as open by default - we can
+	&.open {
+		display: block;
+	}
+}
+
+.accordion-container {
+	@extend %pos_relative;
+	@extend %cf;
+}
+.accordion-footer {
+	text-align: center;
+	color: $lincoln-red;
+	font-weight: 600;
+}
+
+.toggle-icon {
+	position: absolute;
+	top: 9px;
+	right: 20px;
+	font-size: 1.5em;
 }
 
 .automation {
 	@include box-sizing(border-box);
+	font-family: 'Titillium', Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	font-weight: 400;
 }
+
+
+.content > p,.text-content > p, .primary-content > p {
+	@include font-size(16px);
+}
+
+.hero-container {
+	margin-bottom: 2.5em;
+}
+
+
 
