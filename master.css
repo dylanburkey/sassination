@@ -108,6 +108,7 @@
 
 \*----------------------------------------------------------------------------*/
 .marketing-page:after, .section-wrap:after, .base-container:after, .global-container:after, .row:after, .content-container:after, .content:after,
+.content-header:after, .content-img:after, .content-list:after, .banner-text:after, .section:after, .ui-panel_grey:after, .accordion-footer:after, .accordion-content:after, .accordion-container:after {
   content: "";
   clear: both;
   display: block; }
@@ -298,7 +299,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.intro-content {
+  max-width: 98%;
   margin-left: auto;
+  margin-right: auto; }
+
 /*----------------------------------------------------------------------------*\
 
 	#Base Styles
@@ -328,6 +333,11 @@ html {
 
 body {
   margin: 0; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
 
 /*----------------------------------------------------------------------------*\
 
@@ -419,6 +429,9 @@ body {
   background: #333;
   opacity: 0.8;
   filter: alpha(opacity=80); }
+
+.solutions-list li a {
+  text-decoration: none; }
 
 /*----------------------------------------------------------------------------*\
 
@@ -526,6 +539,10 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.btn-large, .btn-small {
+  border: thin solid #111;
+  outline: none; }
+
 /*----------------------------------------------------------------------------*\
 
 	#Decorate
@@ -558,6 +575,16 @@ body {
   .media-container > img {
     max-width: 100%; }
 
+.btn-large, .btn-small {
+  border: thin solid #111;
+  outline: none; }
+
+.btn-large {
+  background: blue; }
+
+.btn-small {
+  background: blue; }
+
 /*----------------------------------------------------------------------------*\
 
 	#Headline Styles
@@ -573,10 +600,33 @@ body {
   font-size: 2.25rem;
   line-height: 1.33333; }
 
-.header {
+.headline-4 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.84615; }
+
+.headline-5 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.09091; }
+
+.headline-6 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.header, .accordion-toggle {
   color: #be1e2d;
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Titillium', Helvetica, Arial, sans-serif; }
+
+.ui-header {
+  background: #e6e7e8;
+  background: url(http://www.lincolnelectric.com/assets/US/EN/store/staged-assets/fade-image.jpg); }
+
+.ui-header > .headline-2 {
+  padding: .625em 0 0 .625em; }
 
 .banner-text {
   text-align: center;
@@ -589,6 +639,45 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #333; }
+
+/*----------------------------------------------------------------------------*\
+
+	#sections
+
+\*----------------------------------------------------------------------------*/
+.section {
+  margin: 1em 0; }
+
+.text-wrap {
+  padding-left: 3em; }
+
+/*----------------------------------------------------------------------------*\
+
+	#UI-Panels
+
+	Use panels for UI.
+
+\*----------------------------------------------------------------------------*/
+.ui-panel_grey {
+  padding: .625em 0;
+  overflow: auto; }
+
+.ui-panel_grey {
+  background: #e6e7e8; }
+
+/*----------------------------------------------------------------------------*\
+
+	#List Items
+
+\*----------------------------------------------------------------------------*/
+.solutions-list li {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 400;
+  line-height: 2; }
+  .solutions-list li a {
+    color: #666; }
 
 /*----------------------------------------------------------------------------*\
 
@@ -605,6 +694,12 @@ body {
 	#Accordion Text
 
 \*----------------------------------------------------------------------------*/
+.accordion-text {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; }
+
 .accordion-text > p {
   font-size: 16px;
   font-size: 1rem;
@@ -637,15 +732,14 @@ body {
 
 .accordion-toggle {
   display: block;
-  font-size: 22px;
-  font-size: 1.375rem;
-  line-height: 1.09091;
-  color: #be1e2d;
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.84615;
   padding: .625em 0 .625em 1em;
   text-transform: uppercase;
   text-decoration: none;
   background: #e6e7e8;
-  font-weight: 600; }
+  border-bottom: thin solid #fff; }
 
 .accordion-content {
   display: none; }
@@ -664,7 +758,7 @@ body {
   font-size: 1.5em; }
 
 .automation {
-  font-family: 'Titillium', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   font-weight: 400;
@@ -680,6 +774,9 @@ body {
   line-height: 1.5; }
 
 .hero-container {
-  margin-bottom: 2.5em; }
+  margin-bottom: 2.5em;
+  width: 100%;
+  height: 175px;
+  overflow: hidden; }
 
 /*# sourceMappingURL=master.css.map */
