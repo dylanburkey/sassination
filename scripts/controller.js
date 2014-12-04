@@ -15,6 +15,7 @@ automationSolutions.controller('SolutionsListCont', function ($scope) {
 		{
 			'name': 'ORBITAL SYSTEMS',
 			'image': 'http://automation.lincolnelectric.com/_img/updated/orbital-systems.png',
+			'video': 'https://youtube.com/',
 			'content': 'Orbital welding systems, intended for tube and pipe joining, incorporate all necessary components including clamp-one weld heads, operator pendants, controllers, welding power sources, water coolers and track rings if necessary. Together, these components deliver the precise arc control and monitoring capability required by code-regulated power generation applications in power plants, chemical plants or refineries.'
 
 		},
@@ -36,13 +37,13 @@ automationSolutions.controller('SolutionsListCont', function ($scope) {
 				'http://automation.lincolnelectric.com/_img/plasma-cutting.png',
 				'http://automation.lincolnelectric.com/_img/cutting-systems.png'
 			],
-			'contents': [
+			'content': [
 				'Lincoln Electric offers one of the broadest cutting product portfolios in the metalworking industry. This portfolio includes plasma cutters ranging from 25 to 400 amps, Harris® oxyfuel cutting systems, Torchmate® CNC plasma cutting tables including torch height control systems, Vernon Tool® tube and pipe profilers and tube cutting machines, as well as the PythonX® all-in-one structural steel fabricating system capable of replacing drilling, punching, sawing and hand torching operations.For exceptional cut edge quality and consistency, our Burny Kaliburn® plasma power sources feature FineLine™ high definition plasma cutting technology which produces square and virtually dross free cuts. When bolt quality holes are needed, FineLine is paired with our UltraSharp™ hole technology to provide industry leading 1 to 1 hole quality that requires virtually no secondary processing.',
 				'Torchmate’s broad portfolio of CNC cutting tables range from the smaller Growth Series™ product line, with a work space as small as 2‘x 2’, to the larger X™ series which expands up to 10’x 40” , or larger. These CNC cutting tables can accommodate a wide range of cutting processes including plasma, oxyfuel, water jet, and if needed – a combination of these processes on a single system.Vernon Tool offers a range of industrial pipe cutting and beveling machines with options that include oxyfuel, abrasive and plasma cutting equipment, robotic cutting solutions, automated loading and conveyor systems, CNC controlled and Windows-based cutting software, and pipe profiling machinery able to accommodate pipe diameters up to 84” and round and square tubing.For applications involving structural steel, the PythonX 3D plasma structural fabrication system combines CNC robotics, high-definition plasma cutting and cut software. The PythonX is capable of processing beams, channels, angles, square/rectangular tubing and plate all on one machine resulting in lower fabrication costs, increased productivity and reduced errors.As a global supplier of 2D and 3D cutting systems, we can provide solutions for a wide range of segments including general fabrication, structural, offshore, pressure vessel, shipbuilding and education – just to name a few.'
 			],
 		},
 		{
-			'name': 'PRE AND POST HYDROFORMING AND STRUCTURAL FRAME AUTOMATION SYSTEMS',
+			'name': 'STRUCTURAL FRAME AUTOMATION SYSTEMS',
 			'image': 'http://automation.lincolnelectric.com/_img/hydroform-technology.png',
 			'content': 'Hydroforming is a cost-effective way to shape metal into strong and lightweight components. This specialized die forming uses high pressure hydraulic fluid to press working material into the die. The use of tubular hydroformed components in automotive applications worldwide is increasing with each new model launch. Frames, structural members and suspension components made using the hydroform process provide greater rigidity and strength compared to their traditionally welded counterparts. Component shapes can be optimized for form or function. Reinforcing components or additional bracket elements can often be eliminated, allowing for simplified assembly, better fit up and higher quality in the finished vehicle.Hydroform technology provides automotive engineers with exceptional flexibility when considering designs and performance requirements for future vehicles. However, this flexibility is only viable when the manufacturing process that supports it can be performed effectively and economically. Automation solutions from Lincoln Electric are helping today’s manufacturers attain their performance goals.'
 		},
@@ -73,3 +74,8 @@ automationSolutions.controller('SolutionsContact', function ($scope) {
 		}
 	];
 });
+
+
+function TestCtrl($scope) {
+	$scope.title = 'write a title here...';
+};

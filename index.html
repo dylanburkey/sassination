@@ -100,7 +100,17 @@
 											</div>
 											<div class="accordion-text">
 												<p>{{solution.content}}<p>
-										</div>
+											</div>
+
+											<div class="media-container">
+												<div class="video-content">
+													{{video.content}}
+												</div>
+												<div class="media-container">
+													{{solution.video}}
+												</div>
+											</div>
+
 										<div class="accordion-footer" ng-controller="SolutionsContact">
 											<span ng-repeat="contact in contacts">{{contact.contactTitle}} - {{contact.contactNumber}} - {{contact.contactEmail}}</span>
 										</div>
@@ -108,6 +118,13 @@
 								</div>
 							</div>
 						    <!-- /.accordion-container -->
+
+						    <!-- Angular Test -->
+
+						    <div ng-controller="TestCtrl">
+						    	<h1>{{title}}</h1>
+						    	<input type="text" ng-model="title">
+						    </div>
 
 							<!--<div class="accordion-container">
 								<div class="row">

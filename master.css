@@ -458,14 +458,17 @@ a {
   margin: auto;
   max-width: 980px; }
 
-.row.tall {
-  margin: 2em 0; }
-.row.medium {
-  margin: 1.5em 0; }
-.row.small {
-  margin: .625em 0; }
-.row.base {
-  margin: 1em 0; }
+.row {
+  margin-left: auto;
+  margin-right: auto; }
+  .row.tall {
+    margin: 2em 0; }
+  .row.medium {
+    margin: 1.5em 0; }
+  .row.small {
+    margin: .625em 0; }
+  .row.base {
+    margin: 1em 0; }
 
 /*----------------------------------------------------------------------------*\
 
@@ -649,7 +652,7 @@ a {
   margin: 1em 0; }
 
 .text-wrap {
-  padding-left: 3em; }
+  padding-left: 2em; }
 
 /*----------------------------------------------------------------------------*\
 
@@ -695,7 +698,7 @@ a {
 
 \*----------------------------------------------------------------------------*/
 .accordion-text {
-  max-width: 95%;
+  max-width: 98%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em; }
