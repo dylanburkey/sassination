@@ -1,13 +1,14 @@
-<!doctype html>
-	<html lang="en" dir="ltr">
-		<head>
-			<meta charset="utf-8">
-				<link rel="stylesheet" href="master.css">
-				<link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
-
-		</head>
-		<body>
-			<div class="global-container">
+			<!DOCTYPE html>
+			<html lang="en" dir="ltr">
+				<head>
+					<meta charset="utf-8">
+					<link rel="stylesheet" href="master.css">
+					<link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+					<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+					<script src="scripts/controller.js"></script>
+				</head>
+			<body>
+			<div class="global-container" ng-app="automationSolutions">
 				<div class="page-container">
 					<div class="automation">
 						<div class="row">
@@ -16,7 +17,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="headline-3 banner-text">
+							<div class="headline-3 header banner-text">
 								<span>WE ARE THE ONLY SINGLE-SOURCE AUTOMATION PROVIDER FOR ALL OF YOUR METAL FABRICATION NEEDS.</span>
 							</div><!-- /.headline-3 -->
 							<div class="intro-content page-copy">
@@ -25,13 +26,48 @@
 								<p>We have the ability to deliver any or all of the automation systems you need, including pre-engineered robotic systems, CNC plasma cutting and controls, fixturing and tooling, engineered line builds, robotic integration, laser systems, weld fume control and fire prevention. There simply is no other company that can provide as complete a solution as Lincoln Electric.</p>
 							</div>
 						</div>
-						<div class="section">
-							<div class="row">
-								<div class="headline-2 header">
-									<span>our solutions</span>
-								</div>
+						<div class="row">
+							<div class="section" role="group">
+								<div class="ui-header">
+									<div class="headline-2 header">
+										<span>our solutions</span>
+									</div>
+								</div><!-- /.ui-header -->
+								<div class="row">
+									<div class="ui-panel_grey">
+										<div class="col-6">
+											<div class="text-wrap">
+												<ul class="solutions-list">
+													<li><a href="#tooling">Orbital Welding Systems</a></li>
+													<li><a href="#Robotics-Complex-Tooling">Robotics + Complex Tooling</a></li>
+													<li><a href="#Tooling-Systems">Tooling Systems</a></li>
+													<li><a href="Press Automation Systems">Press Automation Systems</a></li>
+													<li><a href="">Tube Bending Systems</a></li>
+													<li><a href="">Hydroform Forming Systems</a></li>
+													<li><a href="#laser-systems">Laser Systems</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-6 last">
+											<div class="text-wrap">
+												<ul class="solutions-list">
+													<li><a href="">Mechanized Plasma</a></li>
+													<li><a href="">Oxyfuel Cutting</a></li>
+													<li><a href="">CNC Cutting Systems</a></li>
+													<li><a href="">Structural Cutting Systems</a></li>
+													<li><a href="">Robotics + Tooling</a></li>
+													<li><a href="">Mechanized Automation</a></li>
+													<li><a href="">Environmental Systems</a></li>
+												</ul>
+											</div>
+
+										</div>
+									</div><!-- /.ui-panel -->
+								</div><!-- /.row -->
 							</div>
 						</div>
+						<!-- /.row -->
+						<div class="solutions-container" ng-controller="SolutionsListCont">
 						<div class="row">
 							<div class="accordion-container">
 								<div class="row">
@@ -41,7 +77,13 @@
 												<img src="http://automation.lincolnelectric.com/_img/updated/robotic-systems.jpg" alt="">
 											</div>
 											<div class="accordion-text">
-												<p>Our robotic automation solutions give you the ability to fully automate the welding process. Lincoln Electric offers an array of pre-engineered and custom robotic systems. We specialize in integrating robotic systems to help you decrease manufacturing costs, increase weld quality, improve welding productivity and enhance your working environment. Robotic welding is a way to keep labor costs down, with the added benefit of freeing your most valuable asset – the employees – to apply themselves in more efficient and productive ways. Let automation technology address the routine, repetitive, physically challenging tasks in your plant, and use the highly skilled workers in more efficient and productive ways.</p>
+												<p>Robotic automation is not just for high-volume part producers. Even companies that produce small batches of different parts are able to take advantage of automation with the advances in technology made available over the past few years. A complete cell can be more affordable than you might think, and in most cases, can show a return on investment in just six months.</p>
+
+												<p>An automated system can help you remain competitive by decreasing manufacturing costs, increasing throughput and increasing weld quality. Automation can be two to five times faster than traditional welding methods, increasing both productivity and efficiency. Robots can easily take on the burden of tedious, repetitive jobs and free up skilled welders to work on complex weldments that are not suitable or cost effective for robotics.</p>
+
+												<p>There’s no arguing that robots are reliable. They are there every day and can work without stopping. They consistently produce accurate, high quality work, which can be monitored. Today’s robotic software allows companies to improve the tracking of manufacturing processes by calculating data in “real time.” It may be simpler than you think to justify robotic automation if your goals are to decrease manufacturing cost and increase weld or cut quality.</p>
+
+												<a class="headline-5 header" href="">SEE HOW CONXTECH AUTOMATED THEIR WELDING PROCESS</a>
 										</div>
 										<div class="accordion-footer">
 											<span>Contact Us - 1.888.935.3878 - automation@lincolnelectric.com</span>
@@ -49,27 +91,25 @@
 									</div>
 								</div>
 							</div>
-						    <!-- /.accordion-container -->
-
-							<div class="accordion-container">
+						    <div class="accordion-container" ng-repeat="solution in solutions">
 								<div class="row">
-										<a href="#" class="accordion-toggle">robotic systems<span class="toggle-icon"><i class="fa fa-plus-circle"></i></span></a>
+										<a href="#" class="accordion-toggle">{{solution.name}}<span class="toggle-icon"><i class="fa fa-plus-circle"></i></span></a>
 										<div class="accordion-content">
 											<div class="media-container hero-container">
-												<img src="http://automation.lincolnelectric.com/_img/updated/robotic-systems.jpg" alt="">
+												<img src="{{solution.image}}" alt="">
 											</div>
 											<div class="accordion-text">
-												<p>Our robotic automation solutions give you the ability to fully automate the welding process. Lincoln Electric offers an array of pre-engineered and custom robotic systems. We specialize in integrating robotic systems to help you decrease manufacturing costs, increase weld quality, improve welding productivity and enhance your working environment. Robotic welding is a way to keep labor costs down, with the added benefit of freeing your most valuable asset – the employees – to apply themselves in more efficient and productive ways. Let automation technology address the routine, repetitive, physically challenging tasks in your plant, and use the highly skilled workers in more efficient and productive ways.</p>
+												<p>{{solution.content}}<p>
 										</div>
-										<div class="accordion-footer">
-											<span>Contact Us - 1.888.935.3878 - automation@lincolnelectric.com</span>
+										<div class="accordion-footer" ng-controller="SolutionsContact">
+											<span ng-repeat="contact in contacts">{{contact.contactTitle}} - {{contact.contactNumber}} - {{contact.contactEmail}}</span>
 										</div>
 									</div>
 								</div>
 							</div>
 						    <!-- /.accordion-container -->
 
-							<div class="accordion-container">
+							<!--<div class="accordion-container">
 								<div class="row">
 										<a href="#" class="accordion-toggle">orbital welding systems<span class="toggle-icon"><i class="fa fa-plus-circle"></i></span></a>
 										<div class="accordion-content">
@@ -84,10 +124,11 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						    <!-- /.accordion-container -->
 
 						</div><!-- /.row -->
+						</div><!-- /.solutions-container -->
 					</div><!-- /.automation -->
 				</div><!-- /.page-container -->
 			</div><!-- /.global-container -->
@@ -113,5 +154,5 @@
 			    });
 			});
 			</script>
-		</body>
-	</html>
+			</body>
+		</html>

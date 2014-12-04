@@ -10,7 +10,11 @@
 @import "styles/sass/extends/extends";
 @import "styles/sass/functions/mixins";
 @import "styles/sass/libs/normalize";
-
+%content-space {
+	max-width: 98%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /*----------------------------------------------------------------------------*\
 
@@ -42,6 +46,13 @@ html {
 
 body {
 	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 /*----------------------------------------------------------------------------*\
@@ -130,6 +141,11 @@ body {
 .opacity {
 	background: #333;
 	@include opacity(.8);
+}
+
+
+%td-none {
+	text-decoration: none;
 }
 
 /*----------------------------------------------------------------------------*\
@@ -346,6 +362,23 @@ body {
 }
 
 
+
+%button {
+	border: thin solid #111;
+	outline: none;
+}
+
+
+@mixin create-button($button-name,$button-color){
+	.#{"btn"}-#{$button-name}{
+		@extend %button;
+		background: #{$button-color};
+	}
+}
+
+@include create-button(large,blue);
+@include create-button(small,blue);
+
 /*----------------------------------------------------------------------------*\
 
 	#Headline Styles
@@ -360,10 +393,32 @@ body {
 	@include font-size(36px);
 }
 
+.headline-4 {
+	@include font-size(26px);
+}
+
+.headline-5 {
+	@include font-size(22px);
+}
+
+.headline-6 {
+	@include font-size(16px);
+}
+
 .header {
 	color: $lincoln-red;
 	font-weight: 600;
 	text-transform: uppercase;
+	font-family: 'Titillium', Helvetica, Arial, sans-serif;
+}
+
+
+.ui-header {
+	background: #e6e7e8;
+	background: url(http://www.lincolnelectric.com/assets/US/EN/store/staged-assets/fade-image.jpg);
+}
+.ui-header > .headline-2 {
+	padding: .625em 0 0 .625em;
 }
 
 .banner-text {
@@ -377,6 +432,62 @@ body {
 .intro-content {
 	@include font-size(16px);
 	color: $default-color;
+	@extend %content-space;
+}
+
+
+
+/*----------------------------------------------------------------------------*\
+
+	#sections
+
+\*----------------------------------------------------------------------------*/
+
+.section {
+	margin: 1em 0;
+	@extend %cf;
+}
+
+.text-wrap {
+	padding-left: 3em;
+}
+
+/*----------------------------------------------------------------------------*\
+
+	#UI-Panels
+
+	Use panels for UI.
+
+\*----------------------------------------------------------------------------*/
+
+
+%ui-panel {
+	padding: .625em 0;
+	overflow: auto;
+}
+
+.ui-panel_grey {
+	@extend %ui-panel;
+	@extend %cf;
+	background: #e6e7e8;
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+	#List Items
+
+\*----------------------------------------------------------------------------*/
+
+.solutions-list li {
+	@include font-size(24px);
+	font-weight: 400;
+	line-height: 2;
+
+	a {
+		@extend %td-none;
+		color: #666;
+	}
 }
 
 /*----------------------------------------------------------------------------*\
@@ -394,6 +505,13 @@ body {
 	#Accordion Text
 
 \*----------------------------------------------------------------------------*/
+
+.accordion-text {
+	max-width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}
 
 .accordion-text > p {
 	@include font-size(16px);
@@ -430,13 +548,14 @@ body {
 
 .accordion-toggle {
 	display: block;
-	@include font-size(22px);
-	color: $lincoln-red;
+	@include font-size(26px);
 	padding: .625em 0 .625em 1em;
 	text-transform: uppercase;
 	text-decoration: none;
 	background: #e6e7e8;
-	font-weight: 600;
+	border-bottom: thin solid #fff;
+	@extend .header;
+
 }
 
 
@@ -470,7 +589,7 @@ body {
 
 .automation {
 	@include box-sizing(border-box);
-	font-family: 'Titillium', Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	font-weight: 400;
@@ -484,6 +603,9 @@ body {
 
 .hero-container {
 	margin-bottom: 2.5em;
+	width: 100%;
+	height: 175px;
+	overflow: hidden;
 }
 
 

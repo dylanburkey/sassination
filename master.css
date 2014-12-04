@@ -108,7 +108,6 @@
 
 \*----------------------------------------------------------------------------*/
 .marketing-page:after, .section-wrap:after, .base-container:after, .global-container:after, .row:after, .content-container:after, .content:after,
-.content-header:after, .content-img:after, .content-list:after, .banner-text:after, .accordion-footer:after, .accordion-content:after, .accordion-container:after {
   content: "";
   clear: both;
   display: block; }
@@ -299,6 +298,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+  margin-left: auto;
 /*----------------------------------------------------------------------------*\
 
 	#Base Styles
