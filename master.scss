@@ -10,6 +10,17 @@
 @import "styles/sass/extends/extends";
 @import "styles/sass/functions/mixins";
 @import "styles/sass/libs/normalize";
+
+$default-space: 2em;
+$default-space-small: 1em;
+
+/**
+ * Light Gray Variables
+ */
+
+ $light-gray: #F8F8F8;
+
+
 %content-space {
 	max-width: 98%;
 	margin-left: auto;
@@ -52,6 +63,7 @@ a {
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
+		outline: none;
 	}
 }
 
@@ -233,6 +245,27 @@ a {
 	max-width: 100%;
 }
 
+.video-container {
+	@extend %pos_relative;
+	width: 50%;
+	height: 0;
+	overflow: auto;
+	@extend %cf;
+}
+
+
+
+iframe,
+object,
+video,
+.fluid-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /*----------------------------------------------------------------------------*\
 
 	#Content-Containers
@@ -240,7 +273,8 @@ a {
 \*----------------------------------------------------------------------------*/
 
 .content-container {
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 98%;
 	@extend %cf;
 	@extend %pos_relative;
@@ -358,8 +392,9 @@ a {
 .media-container {
 	@extend %pos_relative;
 	display: block;
+	@extend %cf;
 	> img {
-			max-width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -433,6 +468,7 @@ a {
 	@include font-size(16px);
 	color: $default-color;
 	@extend %content-space;
+	margin-bottom: 2em;
 }
 
 
@@ -469,7 +505,7 @@ a {
 .ui-panel_grey {
 	@extend %ui-panel;
 	@extend %cf;
-	background: #e6e7e8;
+	background: $light-gray;
 }
 
 
@@ -480,13 +516,11 @@ a {
 \*----------------------------------------------------------------------------*/
 
 .solutions-list li {
-	@include font-size(24px);
-	font-weight: 400;
-	line-height: 2;
-
+	margin: .3125em 0;
 	a {
 		@extend %td-none;
 		color: #666;
+		@include font-size(24px);
 	}
 }
 
@@ -507,10 +541,9 @@ a {
 \*----------------------------------------------------------------------------*/
 
 .accordion-text {
-	max-width: 98%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 1em;
+	margin-bottom: $default-space;
 }
 
 .accordion-text > p {
@@ -528,7 +561,8 @@ a {
  	text-align: center;
 	font-weight: 600;
 	@extend %cf;
-	margin-bottom: 1em;
+	margin-top: $default-space;
+	margin-bottom: $default-space;
  }
 
 .accordion-header {
@@ -552,10 +586,13 @@ a {
 	padding: .625em 0 .625em 1em;
 	text-transform: uppercase;
 	text-decoration: none;
-	background: #e6e7e8;
-	border-bottom: thin solid #fff;
+	background: $light-gray;
+	border-bottom: thin solid #333;
 	@extend .header;
-
+	
+	&:focus {
+		outline: none;
+	}
 }
 
 
@@ -593,7 +630,7 @@ a {
 	font-size: 100%;
 	line-height: 1.5;
 	font-weight: 400;
-	color: $default-color;
+	color: #333;
 }
 
 
@@ -608,5 +645,21 @@ a {
 	overflow: hidden;
 }
 
+
+/*----------------------------------------------------------------------------*\
+
+	#Subcontent-containers
+
+\*----------------------------------------------------------------------------*/
+
+.sub-content-container {
+	@extend .row;
+	margin-top: $default-space;
+	margin-bottom: $default-space;
+
+	&.wrap {
+		margin-top: 0;
+	}
+}
 
 
